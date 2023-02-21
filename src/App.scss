@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+$font: 'Inter', sans-serif;
+$dblue: hsl(240, 38%, 20%);
+$gblue: hsl(240, 18%, 77%);
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: $font;
+
+}
+
+.container{
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-image:
+ url(./pattern-curve.svg),
+ url(./pattern-quotes.svg);
+background-position: bottom left, top 32% left 24%;
+background-repeat: no-repeat, no-repeat;
+}
+
+@media screen and (max-width:1000px) {
+    .container{
+        background-image:
+ url(./pattern-curve.svg);
+background-position: bottom left;
+    }
+}
+
+
+@media screen and (max-width:375px) {
+    .container{
+        background-image:
+        url(./pattern-curve.svg),
+        url(./pattern-quotes.svg);
+       background-position: bottom left, top 60% center;
+       background-repeat: no-repeat, no-repeat;
+}
+}
